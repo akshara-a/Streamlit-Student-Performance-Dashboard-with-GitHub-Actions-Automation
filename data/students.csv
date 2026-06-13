@@ -1,0 +1,41 @@
+student_id,name,course,city,attendance,assignment_score,test_score,final_score,grade
+S001,Meera,Python,Hyderabad,70,59,48,56.8,C
+S002,Meera,Python,Pune,57,46,45,47.8,D
+S003,Rohan,Data Analytics,Chennai,90,57,85,74.8,B
+S004,Saanvi,Data Analytics,Pune,92,62,91,79.6,B
+S005,Aarav,Data Analytics,Pune,76,62,49,59.6,C
+S006,Rohan,Machine Learning,Chennai,60,69,46,58.0,C
+S007,Tara,Machine Learning,Hyderabad,57,91,69,75.4,B
+S008,Meera,Web Development,Chennai,90,63,93,80.4,B
+S009,Tara,Data Analytics,Chennai,57,87,54,67.8,C
+S010,Kavya,Python,Bengaluru,61,69,57,62.6,C
+S011,Rahul,Machine Learning,Bengaluru,78,67,53,63.6,C
+S012,Arjun,Python,Bengaluru,89,91,55,76.2,B
+S013,Ananya,Web Development,Pune,72,85,84,82.0,B
+S014,Nisha,Machine Learning,Chennai,69,97,42,69.4,C
+S015,Vivaan,Web Development,Hyderabad,59,58,98,74.2,B
+S016,Vivaan,Data Analytics,Pune,80,86,69,78.0,B
+S017,Kabir,Machine Learning,Bengaluru,70,92,75,80.8,B
+S018,Arjun,Web Development,Pune,78,59,48,58.4,C
+S019,Priya,Python,Chennai,62,54,80,66.0,C
+S020,Ananya,Web Development,Chennai,79,69,78,74.6,B
+S021,Rahul,Machine Learning,Chennai,98,91,47,74.8,B
+S022,Arjun,Machine Learning,Chennai,73,72,50,63.4,C
+S023,Rahul,Python,Hyderabad,87,93,51,75.0,B
+S024,Meera,Machine Learning,Bengaluru,64,68,88,75.2,B
+S025,Ananya,Python,Hyderabad,86,46,47,54.4,D
+S026,Tara,Machine Learning,Bengaluru,58,60,96,74.0,B
+S027,Ishaan,Python,Pune,59,93,74,78.6,B
+S028,Kabir,Data Analytics,Pune,90,55,56,62.4,C
+S029,Saanvi,Data Analytics,Bengaluru,100,64,65,71.6,B
+S030,Tara,Web Development,Pune,62,60,54,58.0,C
+S031,Ishaan,Machine Learning,Chennai,92,80,54,72.0,B
+S032,Nisha,Python,Chennai,100,85,43,71.2,B
+S033,Nisha,Python,Chennai,76,49,72,63.6,C
+S034,Nisha,Machine Learning,Pune,68,79,48,64.4,C
+S035,Priya,Data Analytics,Pune,81,57,46,57.4,C
+S036,Meera,Web Development,Hyderabad,82,71,69,72.4,B
+S037,Diya,Python,Chennai,80,91,61,76.8,B
+S038,Meera,Data Analytics,Bengaluru,67,79,68,72.2,B
+S039,Kabir,Web Development,Bengaluru,72,74,55,66.0,C
+S040,Ishaan,Web Development,Chennai,58,86,74,75.6,B
