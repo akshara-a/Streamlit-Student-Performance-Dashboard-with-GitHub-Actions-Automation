@@ -6,11 +6,22 @@ on:
   workflow_dispatch:
 
 jobs:
-  ping:
+  wake-app:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Ping Streamlit app
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Playwright
+        run: |
+          npm init -y
+          npm install playwright
+          npx playwright install chromium
+
+      - name: Open Streamlit app in browser
         env:
           APP_URL: ${{ secrets.STREAMLIT_APP_URL }}
         run: |
@@ -19,16 +30,27 @@ jobs:
             exit 1
           fi
 
-          echo "Pinging $APP_URL"
+          node <<'EOF'
+          const { chromium } = require("playwright");
 
-          curl -sS -L \
-            --max-time 60 \
-            --max-redirs 10 \
-            --retry 3 \
-            --retry-delay 5 \
-            -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120.0 Safari/537.36" \
-            -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" \
-            "$APP_URL" \
-            -o /tmp/streamlit_response.html
+          (async () => {
+            const url = process.env.APP_URL;
+            console.log(`Opening ${url}`);
 
-          echo "App ping completed."
+            const browser = await chromium.launch({ headless: true });
+            const page = await browser.newPage();
+
+            await page.goto(url, {
+              waitUntil: "networkidle",
+              timeout: 60000
+            });
+
+            await page.waitForTimeout(10000);
+
+            const title = await page.title();
+            console.log(`Page title: ${title}`);
+
+            await browser.close();
+            console.log("Streamlit app opened successfully.");
+          })();
+          EOF
