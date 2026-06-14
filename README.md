@@ -195,7 +195,7 @@ The workflow is located at:
 ### What the workflow does
 
 1. Runs on GitHub's `ubuntu-latest` runner.
-2. Sets up Node.js 20.
+2. Sets up Node.js 24.
 3. Installs Playwright.
 4. Installs the Chromium browser used by Playwright.
 5. Reads the deployed app URL from the `STREAMLIT_APP_URL` repository secret.
